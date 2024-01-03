@@ -1,0 +1,24 @@
+@import '../mixins/mixins';
+
+.nav {
+    padding: 50px 25px;
+    @include flexAlignment(space-between, center);
+    margin-inline: 24px;
+    height: $header-height;
+    background-color: transparent;
+
+    &-page-links {
+
+        ul {
+            display: flex;
+            gap: 40px;
+        }
+
+
+    }
+
+    &-menu {
+        visibility: hidden;
+    }
+
+}
