@@ -1,5 +1,11 @@
-@mixin flexAlignment ($justify, $aling) {
+@mixin flexAlignment ($justify: center, $aling: center) {
     display: flex;
     justify-content: $justify;
     align-items: $aling;
+}
+
+@mixin columGap ($px) {
+    -moz-column-gap: $px;
+    -webkit-column-gap: $px;
+    column-gap: $px;
 }

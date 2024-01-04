@@ -1,4 +1,3 @@
-@import '../variables/index.scss';
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css");
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
@@ -9,6 +8,12 @@
     border: none;
     outline: none;
     font-family: $bodyFont;
+    transition: .3s all ease-in-out;
+}
+
+body {
+    background-color: $body-color;
+    height: 900vh; //Silicez
 }
 
 ul {
@@ -17,4 +22,19 @@ ul {
 
 a {
     text-decoration: none;
+}
+
+.section {
+    padding-block: 80px 16px;
+}
+
+.container {
+    max-width: 1120px;
+    margin-inline: 24px;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
