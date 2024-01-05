@@ -1,0 +1,90 @@
+.footer{
+    color: white;
+    @include flexAlignment;
+
+    &-container{
+        flex-direction: column;
+        @include flexAlignment(center, start);
+        gap: 40px;
+        width: 100%;
+
+        &-title{
+            color: $first-color;
+            font-weight: $font-semi-bold;
+        }
+
+        &-box{
+            @include flexAlignment(space-between, center);
+            width: 60%;
+            gap: 24px;
+
+            &-links{
+                @include flexAlignment;
+                flex-direction: column;
+                gap: 10px;
+                
+
+                h3{
+                    color: $white-color;
+                    margin-bottom: 15px;
+                    font-size: $h2-font-size;
+                    font-weight: $font-semi-bold;
+                }
+
+                a{
+                    color: $text-color;
+
+                    &:hover{
+                        color: $first-color;
+                    }
+                }
+            }
+
+            &-forms{
+                @include flexAlignment(center, start);
+                flex-direction: column;
+                gap: 20px;
+
+                input{
+                    padding: 15px 45px;
+                    border-radius: 64px;
+                    background-color: $container-color;
+                    color: $text-color;
+                }
+
+            }
+        }
+
+        &-bottom{
+            width: 100%;
+            gap: 15px;
+            @include flexAlignment;
+            flex-direction: column;
+
+            &-social{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 20px;
+                font-size: $h2-font-size;
+
+                a{
+                    color: $text-color;
+
+                    &:hover{
+                        color: $first-color;
+                    }
+
+                }
+
+            }
+
+            h4{
+                color: $text-color;
+                font-weight: $font-medium;
+            }
+        }
+
+    }
+
+}

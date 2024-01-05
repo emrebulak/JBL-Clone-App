@@ -9,3 +9,9 @@
     -webkit-column-gap: $px;
     column-gap: $px;
 }
+
+@mixin responsive($brekpoint) {
+    @media screen and (max-width: $brekpoint) {
+        @content;
+    }
+}

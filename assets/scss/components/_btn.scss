@@ -1,21 +1,23 @@
 .btn {
-    background: $gradient-color;
-    display: block;
-    padding: 13px 45px;
-    border-radius: 64px;
-    color: $white-color;
-    font-size: $h3-font-size;
-    font-weight: $font-semi-bold;
-    @include flexAlignment;
-    gap: 7px;
-    cursor: pointer;
+  background: $gradient-color;
+  display: block;
+  padding: 13px 45px;
+  border-radius: 64px;
+  color: $white-color;
+  font-size: $h3-font-size;
+  font-weight: $font-semi-bold;
+  @include flexAlignment;
 
-    &:hover {
-        transform: scale(1.1);
-    }
+  gap: 7px;
+  cursor: pointer;
 
-    i {
-        font-size: $h1-font-size + 8px;
-        color: $first-color;
-    }
+  &:hover {
+    transform: scale(1.1);
+    @extend %box-shadow;
+  }
+
+  i {
+    font-size: $h1-font-size + 8px;
+    color: $first-color;
+  }
 }

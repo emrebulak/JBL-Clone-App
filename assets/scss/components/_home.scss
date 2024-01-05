@@ -1,109 +1,133 @@
 .home {
-    color: $white-color;
+  color: $white-color;
+  @include flexAlignment;
+
+  &-container {
+    position: relative;
+    @include flexAlignment(space-between, center);
+
+    .home-content {
+      @include flexAlignment;
+      flex-direction: column;
+      gap: 35px;
+
+      &-img {
+        width: 500px;
+      }
+    }
+  }
+
+  &-title {
+    font-size: $biggest-font-size;
+    @include columGap(4px);
+    color: $first-color;
+    position: absolute;
+    top: -32px;
+    @include flexAlignment;
+    gap: 4px;
+    font-weight: $font-semi-bold;
+
+    span:nth-child(2) {
+      z-index: -1;
+    }
+  }
+
+  &-tooltip {
+    position: absolute;
+    top: -8px;
+    right: 38px;
+    @include flexAlignment(center, start);
+
+    &-text {
+      margin-top: -12px;
+      background: $gradient-color;
+      padding: 4px 12px;
+      border-radius: 64px;
+      white-space: nowrap;
+      cursor: pointer;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  &-social {
+    order: -1;
+    row-gap: 96px;
+    position: absolute;
+    top: 48px;
+    left: -330px;
+    flex-direction: column;
     @include flexAlignment;
 
-    &-container {
-        position: relative;
-        @include flexAlignment(space-between, center);
+    &-text {
+      color: $text-color;
+      rotate: (90deg);
+      font-weight: $font-medium;
+      font-size: $normal-font-size;
 
-        .home-content {
-            @include flexAlignment;
-            flex-direction: column;
-            gap: 35px;
-
-            &-img {
-                width: 500px;
-            }
-        }
+      &::after {
+        content: "";
+        width: 48px;
+        height: 1px;
+        background-color: $text-color;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: -60px;
+        margin: auto;
+      }
     }
 
-    
-    
+    &-icons {
+      flex-direction: column;
+      @include flexAlignment;
+      gap: 20px;
+
+      a {
+        font-size: 25px;
+        color: $text-color;
+
+        &:hover {
+          color: $first-color;
+        }
+      }
+    }
+  }
+}
+
+@include responsive($lg-screen) {
+  .home {
+    &-container {
+      @include flexAlignment;
+    }
+
+    &-content-img {
+      width: 250px !important;
+    }
 
     &-title {
-        font-size: $biggest-font-size;
-        display: flex;
-        @include columGap(4px);
-        color: $first-color;
-        position: absolute;
-        top: -32px;
-        justify-self: center;
-        align-self: center;
-        gap: 4px;
-        font-weight: $font-semi-bold;
-
-        span:nth-child(2) {
-            z-index: -1;
-        }
-
+      font-size: 250px;
+      @include columGap(4px);
+      top: -52px;
     }
 
     &-tooltip {
-        position: absolute;
-        top: -8px;
-        right: 38px;
-        @include flexAlignment(center, start);
-
-
-        &-text {
-            margin-top: -12px;
-            background: $gradient-color;
-            padding: 4px 12px;
-            border-radius: 64px;
-            white-space: nowrap;
-            cursor: pointer;
-
-            &:hover {
-                transform: scale(1.1);
-            }
-        }
+      top: -8px;
+      right: -90px;
+      &-text {
+        margin-top: -12px;
+        padding: 4px 12px;
+      }
     }
+  }
+}
 
-    &-social {
-        order: -1;
-        row-gap: 96px;
-        position: absolute;
-        top: 48px;
-        left: -330px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-
-        &-text {
-            color: $text-color;
-            rotate: (90deg);
-            font-weight: $font-medium;
-            font-size: $normal-font-size;
-
-            &::after {
-                content: "";
-                width: 48px;
-                height: 1px;
-                background-color: $text-color;
-                position: absolute;
-                top: 0;
-                bottom: 0;
-                right: -60px;
-                margin: auto;
-            }
-        }
-
-        &-icons {
-            flex-direction: column;
-            @include flexAlignment;
-            gap: 20px;
-
-            a {
-                font-size: 25px;
-                color: $text-color;
-
-                &:hover {
-                    color: $first-color;
-                }
-            }
-        }
+@include responsive($md-screen) {
+  .home {
+    &-container {
+      flex-direction: column;
     }
-
-
+  }
 }
