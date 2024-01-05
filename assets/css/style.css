@@ -26,6 +26,9 @@ a {
   max-width: 1120px;
   margin-inline: 24px; }
 
+.mt-120 {
+  margin-top: 120px; }
+
 img {
   display: block;
   max-width: 100%;
@@ -161,3 +164,56 @@ img {
   .btn i {
     font-size: 32px;
     color: #ff6200; }
+
+.about {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .about-container {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 24px; }
+    .about-container h2 {
+      align-self: center; }
+    .about-container p {
+      color: #9d9895; }
+  .about-image {
+    width: 100%; }
+    .about-image-selfimage {
+      width: 280px; }
+
+.favorite {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .favorite-container {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .favorite-container h2 {
+      font-weight: 600; }
+    .favorite-container .favorite-items {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 30px; }
+      .favorite-container .favorite-items .favorite-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 8px; }
+        .favorite-container .favorite-items .favorite-item img {
+          width: 200px;
+          cursor: pointer; }
+          .favorite-container .favorite-items .favorite-item img:hover {
+            transform: scale(1.3); }
+        .favorite-container .favorite-items .favorite-item h5 {
+          color: #9d9895;
+          font-size: 16px;
+          font-weight: 500; }

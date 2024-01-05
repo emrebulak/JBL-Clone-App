@@ -1,0 +1,27 @@
+.about{
+    color: white;
+    @include flexAlignment;
+
+    &-container{
+        flex-direction: column;
+        @include flexAlignment(center, start);
+        gap: 24px;
+
+        h2{
+            align-self: center;
+        }
+
+        p{
+            color: $text-color;
+        }
+    }
+
+    &-image{
+        width: 100%;
+
+        &-selfimage{
+            width: 280px;
+        }
+        
+    }
+}
