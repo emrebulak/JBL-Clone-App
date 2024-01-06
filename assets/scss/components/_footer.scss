@@ -15,6 +15,7 @@
 
         &-box{
             @include flexAlignment(space-between, center);
+            flex-wrap: wrap;
             width: 60%;
             gap: 24px;
 

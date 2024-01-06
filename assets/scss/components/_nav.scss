@@ -40,3 +40,18 @@
     }
 
 }
+
+@include responsive($md-screen) {
+    .nav{
+        &-page-links{
+            display: none;
+        }
+
+        &-menu {
+            visibility: visible;
+            cursor: pointer;
+            color: $white-color;
+            font-size: 30px;
+        }
+    }
+  }

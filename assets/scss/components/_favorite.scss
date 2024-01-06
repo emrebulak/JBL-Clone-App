@@ -1,39 +1,40 @@
 .favorite {
-    color: $white-color;
+  color: $white-color;
+  @include flexAlignment;
+
+  &-container {
+    flex-direction: column;
     @include flexAlignment;
 
-    &-container {
-        flex-direction: column;
-        @include flexAlignment;
-
-        h2 {
-            font-weight: $font-semi-bold;
-        }
-
-        .favorite-items {
-            @include flexAlignment;
-            gap: 30px;
-
-            .favorite-item{
-                @include flexAlignment;
-                flex-direction: column;
-                gap: 8px;
-
-                img{
-                    width: 200px;
-                    cursor: pointer;
-
-                    &:hover{
-                        transform: scale(1.3);
-                    }
-                }
-
-                h5{
-                    color: $text-color;
-                    font-size: $h3-font-size;
-                    font-weight: $font-medium;
-                }
-            }
-        }
+    h2 {
+      font-weight: $font-semi-bold;
     }
+
+    .favorite-items {
+      @include flexAlignment;
+      flex-wrap: wrap;
+      gap: 30px;
+
+      .favorite-item {
+        @include flexAlignment;
+        flex-direction: column;
+        gap: 8px;
+
+        img {
+          width: 200px;
+          cursor: pointer;
+
+          &:hover {
+            transform: scale(1.3);
+          }
+        }
+
+        h5 {
+          color: $text-color;
+          font-size: $h3-font-size;
+          font-weight: $font-medium;
+        }
+      }
+    }
+  }
 }

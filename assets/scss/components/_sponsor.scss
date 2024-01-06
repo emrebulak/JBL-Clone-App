@@ -1,20 +1,21 @@
 .sponsor {
   @include flexAlignment;
 
-  &-container{
+  &-container {
     @include flexAlignment;
+    flex-wrap: wrap;
     gap: 40px;
-    img{
-        width: 150px;
-        cursor: pointer;
+    img {
+      width: 150px;
+      cursor: pointer;
 
-        &:nth-child(3){
-            padding-top: 22px;
-        }
+      &:nth-child(3) {
+        padding-top: 22px;
+      }
 
-        &:hover{
-            transform: scale(1.15);
-        }
+      &:hover {
+        transform: scale(1.15);
+      }
     }
   }
 }

@@ -21,3 +21,15 @@
     color: $first-color;
   }
 }
+
+@include responsive($sm-screen) {
+  .btn {
+    padding: 10px 25px;
+    font-size: $h3-font-size;
+    gap: 5px;
+  
+    i {
+      font-size: $h2-font-size + 5px;
+    }
+  }
+}
